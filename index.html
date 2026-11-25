@@ -47,21 +47,6 @@
     </head>
     <body>
         <div id="map">
-        <!-- Container de l'icône cliquable -->
-        <div id="aideIcon" style="cursor:pointer; font-size:28px;" title="Aides pour travaux">🏗️</div>
-        
-        <!-- Panneau d'infos -->
-        <div id="aidePanel" style="display:none; position:absolute; top:60px; left:60px;
-             background:white; border:1px solid #999; border-radius:6px;
-             padding:12px; max-width:320px; box-shadow:0 2px 8px rgba(0,0,0,.3); z-index:2000;">
-          <b>Aides pour travaux structurels</b><br><br>
-          <ul>
-            <li><b>MaPrimeRénov' Copropriété</b> : pour les travaux sur les parties communes.</li>
-            <li><b>OPAH-RU / POPAC</b> : primes selon zone et travaux éligibles.</li>
-            <li><b>Pgé / Anah</b> : etc.</li>
-          </ul>
-          <button onclick="document.getElementById('aidePanel').style.display='none'">Fermer</button>
-        </div>
             <div id="popup" class="ol-popup">
                 <a href="#" id="popup-closer" class="ol-popup-closer"></a>
                 <div id="popup-content"></div>
