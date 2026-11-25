@@ -11,6 +11,20 @@ var map = new ol.Map({
     })
 });
 
+// Icône ancrée à une coordonnée (WGS84 : lon, lat) — à adapter
+var aideOverlay = new ol.Overlay({
+    element: document.getElementById('aideIcon'),
+    positioning: 'center-center',
+    stopEvent: true
+});
+position:absolute; top:10px; right:60px; z-index:1000;
+
+// Au clic sur l'icône : afficher le panneau
+document.getElementById('aideIcon').addEventListener('click', function () {
+    var p = document.getElementById('aidePanel');
+    p.style.display = (p.style.display === 'none') ? 'block' : 'none';
+});
+
 //initial view - epsg:3857 coordinates if not "Match project CRS"
 map.getView().fit([590975.924164, 5348210.960571, 610663.487421, 5358344.265188], map.getSize());
 
